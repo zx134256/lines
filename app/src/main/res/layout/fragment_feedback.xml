@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/title_lines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/discuss"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:text="@string/feedback_title"/>
+
+        <EditText
+            android:id="@+id/title_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/discuss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="15dp"
+        android:hint="@string/feedback_content_hint"
+        android:gravity="start"
+        android:background="@drawable/edit_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_lines"
+        app:layout_constraintBottom_toTopOf="@+id/submit"/>
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/round_button"
+        android:text="@string/submit_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discuss"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
